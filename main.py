@@ -1,13 +1,12 @@
 from fastapi import FastAPI
+from src.routes import app_routers
 
-app = FastAPI()
-
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+api = FastAPI(title='Vitivinicultura Embrapa')
 
 
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
+def create_app() -> FastAPI:
+    app_routers.start_router(api)
+    return api
+
+
+app = create_app()
