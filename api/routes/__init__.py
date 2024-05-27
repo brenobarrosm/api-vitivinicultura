@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 
-from src.routes import comercializacao_router
-from src.routes import exportacao_router
-from src.routes import importacao_router
-from src.routes import processamento_router
-from src.routes import producao_router
+from api.routes import comercializacao_router
+from api.routes import exportacao_router
+from api.routes import importacao_router
+from api.routes import processamento_router
+from api.routes import producao_router
 
 
 class AppRouters:

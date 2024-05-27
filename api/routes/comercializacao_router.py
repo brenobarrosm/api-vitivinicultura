@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from starlette import status
 from fastapi.responses import JSONResponse
 
-from src.controllers.comercializacao_controller import Comercializacao
+from api.controllers.comercializacao_controller import Comercializacao
 
 comercializacao = Comercializacao()
 

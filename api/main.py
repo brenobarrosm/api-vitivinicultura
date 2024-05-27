@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.routes import app_routers
+from api.routes import app_routers
 
 api = FastAPI(title='Vitivinicultura Embrapa')
 
