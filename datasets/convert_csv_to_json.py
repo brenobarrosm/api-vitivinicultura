@@ -5,5 +5,5 @@ files = os.listdir('C:/Users/Breno/PycharmProjects/api-vitivinicultura/datasets/
 
 for file in files:
     csv_file = pd.read_csv(f'datasets/csv/{file}', sep=';')
-    output_name = os.path.basename(file)
+    output_name = os.path.basename(file).replace('.csv', '')
     csv_file.to_json(f'datasets/json/{output_name}.json', orient='records')
