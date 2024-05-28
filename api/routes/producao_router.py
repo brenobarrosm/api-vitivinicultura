@@ -1,12 +1,15 @@
 from fastapi import APIRouter
 from starlette import status
-from fastapi.responses import JSONResponse
 
-router = APIRouter(prefix="/producao", tags=["produção"])
+from api.controllers.producao_controller import Producao
+
+producao = Producao()
+
+router = APIRouter(prefix="/producao", tags=["Produção"])
 
 
 @router.get('',
             status_code=status.HTTP_200_OK,
             description='Retorna os dados de producao')
 def exportacao():
-    return 'Producao'
+    return producao.get_producao()
